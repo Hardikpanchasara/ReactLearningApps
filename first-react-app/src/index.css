@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+.navbar-brand{
+  color: #565387 !important;
+}
+
+.navbar a{
+  text-transform: capitalize;
+}
+
+.navbar a:hover{
+  color: #3498db !important;
+}
+
+.active {
+  font-weight: bold !important;
+  border-bottom: 1px solid #565387 !important;
+}
+
+.card-img-top {
+  height: 50vh !important;
+}
+
+#header .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse ;
+}
+
+@keyframes up-down {
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}
