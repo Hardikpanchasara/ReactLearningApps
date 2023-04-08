@@ -8,7 +8,7 @@ const Createnote = (params) => {
         title:"",
         content: "",
     })
-    const InputEvent = (e) => {
+    const InputEvent = (e) => {   
         const {name , value} = e.target
         setnote((prev) => {
             return {
