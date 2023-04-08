@@ -9,6 +9,8 @@ import LifeCycle from './05-LifeCycle'
 import ConditionalRendaring from './06ConditionalRendaring'
 import ListKeys from './07ListKeys'
 import Task from './Task'
+import UncontrolledCompo from './09UncontrolledCompo'
+import ControlledCompo from './08ControlledCompo' 
 
 export default class ClassRoutes extends Component {
   render() {
@@ -23,6 +25,8 @@ export default class ClassRoutes extends Component {
             <Route path='lifecycle' element={<LifeCycle />} />
             <Route path='Conditionalrendaring' element={<ConditionalRendaring />} />
             <Route path='listkeys' element={<ListKeys />} />
+            <Route path='controlledcompo' element={<ControlledCompo />} />
+            <Route path='uncontrolledcompo' element={<UncontrolledCompo />} />
             <Route path='task' element={<Task />} />
           </Route>
         </Routes>

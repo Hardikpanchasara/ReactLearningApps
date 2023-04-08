@@ -34,6 +34,12 @@ export default class ClasscomponentMenu extends Component {
             <li className="d-block" >
             <Link to="task"><MDBBtn className='my-2' color="secondary" > Task </MDBBtn></Link>
             </li>
+            <li className="d-block" >
+            <Link to="controlledcompo"><MDBBtn className='my-2' color="secondary" > Controlled Component </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+            <Link to="uncontrolledcompo"><MDBBtn className='my-2' color="secondary" > Uncontrolled Component</MDBBtn></Link>
+            </li>
           </ul>
         </div>
         <Outlet />
