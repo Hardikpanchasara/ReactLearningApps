@@ -32,13 +32,16 @@ export default class ClasscomponentMenu extends Component {
             <Link to="listkeys"><MDBBtn className='my-2' color="secondary" > ListKeys </MDBBtn></Link>
             </li>
             <li className="d-block" >
-            <Link to="task"><MDBBtn className='my-2' color="secondary" > Task </MDBBtn></Link>
-            </li>
-            <li className="d-block" >
             <Link to="controlledcompo"><MDBBtn className='my-2' color="secondary" > Controlled Component </MDBBtn></Link>
             </li>
             <li className="d-block" >
             <Link to="uncontrolledcompo"><MDBBtn className='my-2' color="secondary" > Uncontrolled Component</MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+            <Link to="compositionvsinheritance"><MDBBtn className='my-2' color="secondary" > Composition Vs Inheritance </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+            <Link to="task"><MDBBtn className='my-2' color="secondary" > Task </MDBBtn></Link>
             </li>
           </ul>
         </div>

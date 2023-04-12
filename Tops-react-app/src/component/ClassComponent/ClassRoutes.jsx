@@ -11,6 +11,7 @@ import ListKeys from './07ListKeys'
 import Task from './Task'
 import UncontrolledCompo from './09UncontrolledCompo'
 import ControlledCompo from './08ControlledCompo' 
+import CompositionVsInheritance from './10CompositionVsInheritance'
 
 export default class ClassRoutes extends Component {
   render() {
@@ -27,6 +28,7 @@ export default class ClassRoutes extends Component {
             <Route path='listkeys' element={<ListKeys />} />
             <Route path='controlledcompo' element={<ControlledCompo />} />
             <Route path='uncontrolledcompo' element={<UncontrolledCompo />} />
+            <Route path='compositionvsinheritance' element={<CompositionVsInheritance />} />
             <Route path='task' element={<Task />} />
           </Route>
         </Routes>

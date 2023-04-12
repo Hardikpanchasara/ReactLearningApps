@@ -16,6 +16,7 @@ const MainRoutes = createBrowserRouter([
         path: "/",
         element: <Home />,
         errorElement : <Error404Page />
+        // ErrorBoundary: Error404Page
     },
     {
         path: "/feature",

@@ -4,37 +4,36 @@ import lifecycle from '../../img/life-cycle-class-compo.webp'
 
 
 export default class LifeCycle extends Component {
-    constructor(props){
+    constructor(props) {
         console.log("constructor");
         super(props)
         this.state = {
-            turnonoff : true
+            turnonoff: true
         }
     }
-    componentDidMount(){
+    componentDidMount() {
         console.log("componentDidMount");
     }
-    shouldComponentUpdate(){
+    shouldComponentUpdate() {
         console.log("ShouldComponentUpdate")
         return true
     }
-    componentDidUpdate(){
+    componentDidUpdate() {
         console.log("componentDidUpdate");
     }
-    componentWillUnmount(){
+    componentWillUnmount() {
         console.log("componentWillUnmount");
     }
-    cpmonent
-  render() {
+    render() {
         console.log("render");
         return (
             <div>
-               <MDBBtn className='mx-auto d-block' color="secondary" onClick={() => {this.setState({turnonoff : !this.state.turnonoff})}} > {this.state.turnonoff ? "on" : "off"} </MDBBtn>
-               <div className="col-8 my-5 mx-auto">
-               <img src={lifecycle} alt="..."  />
-               </div>
+                <MDBBtn className='mx-auto d-block' color="secondary" onClick={() => { this.setState({ turnonoff: !this.state.turnonoff }) }} > {this.state.turnonoff ? "on" : "off"} </MDBBtn>
+                <div className="col-8 my-5 mx-auto">
+                    <img src={lifecycle} alt="..." />
+                </div>
             </div>
         );
-    
-  }
+
+    }
 }
