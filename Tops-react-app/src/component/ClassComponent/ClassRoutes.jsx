@@ -12,6 +12,7 @@ import Task from './Task'
 import UncontrolledCompo from './09UncontrolledCompo'
 import ControlledCompo from './08ControlledCompo' 
 import CompositionVsInheritance from './10CompositionVsInheritance'
+import StateLifting from './11StateLifting'
 
 export default class ClassRoutes extends Component {
   render() {
@@ -29,6 +30,7 @@ export default class ClassRoutes extends Component {
             <Route path='controlledcompo' element={<ControlledCompo />} />
             <Route path='uncontrolledcompo' element={<UncontrolledCompo />} />
             <Route path='compositionvsinheritance' element={<CompositionVsInheritance />} />
+            <Route path='statelifting' element={<StateLifting />} />
             <Route path='task' element={<Task />} />
           </Route>
         </Routes>

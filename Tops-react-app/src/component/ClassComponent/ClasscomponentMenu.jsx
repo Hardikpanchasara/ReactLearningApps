@@ -41,6 +41,9 @@ export default class ClasscomponentMenu extends Component {
             <Link to="compositionvsinheritance"><MDBBtn className='my-2' color="secondary" > Composition Vs Inheritance </MDBBtn></Link>
             </li>
             <li className="d-block" >
+            <Link to="statelifting"><MDBBtn className='my-2' color="secondary" > State Lifting </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
             <Link to="task"><MDBBtn className='my-2' color="secondary" > Task </MDBBtn></Link>
             </li>
           </ul>
