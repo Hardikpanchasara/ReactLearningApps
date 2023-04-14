@@ -12,6 +12,9 @@ export default class ListKeys extends Component {
         console.log(key);
         return <li key={key}>{value}</li>
     })
+    // let dataOfArr = arr.forEach(arr => {
+    //       console.log(arr);
+    //   })
 
 
     const posts = [

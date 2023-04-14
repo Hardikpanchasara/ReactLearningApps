@@ -44,6 +44,15 @@ export default class ClasscomponentMenu extends Component {
             <Link to="statelifting"><MDBBtn className='my-2' color="secondary" > State Lifting </MDBBtn></Link>
             </li>
             <li className="d-block" >
+            <Link to="arrayaccess"><MDBBtn className='my-2' color="secondary" > Array access </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+            <Link to="apiexample"><MDBBtn className='my-2' color="secondary" > Api example </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+            <Link to="cssexample"><MDBBtn className='my-2' color="secondary" > css example </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
             <Link to="task"><MDBBtn className='my-2' color="secondary" > Task </MDBBtn></Link>
             </li>
           </ul>
