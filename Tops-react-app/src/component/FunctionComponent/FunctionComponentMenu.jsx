@@ -5,7 +5,9 @@ const FunctionComponentMenu = () => {
   return (
     <>
     <ul>
-        <li><Link to="clock">clock</Link></li>
+        <li><Link to="Functionintro">Function component Intro</Link></li>
+        <li><Link to="usestate">UseState</Link></li>
+        <li><Link to="useeffect">UseEffect</Link></li>
     </ul>
     <Outlet />
     </>
