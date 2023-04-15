@@ -11,12 +11,19 @@ export default class LifeCycle extends Component {
             turnonoff: true
         }
     }
+    componentWillMount() {
+        console.log("componentWillMount");
+    }
     componentDidMount() {
         console.log("componentDidMount");
     }
     shouldComponentUpdate() {
         console.log("ShouldComponentUpdate")
         return true
+        // return false 
+    }
+    componentWillUpdate(nextProps, nextState) {
+        console.log("componentWillUpdate");
     }
     componentDidUpdate() {
         console.log("componentDidUpdate");
@@ -24,6 +31,11 @@ export default class LifeCycle extends Component {
     componentWillUnmount() {
         console.log("componentWillUnmount");
     }
+
+    // componentWillReceiveProps(nextProps) {
+    //     console.log("componentWillReceiveProps");
+    // }
+
     render() {
         console.log("render");
         return (

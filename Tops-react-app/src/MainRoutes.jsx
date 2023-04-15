@@ -4,8 +4,8 @@ import About from './component/About'
 import Example from './component/Example'
 import Feature from './component/Feature'
 import Home from './component/Home'
-import Pricing from './component/Pricing'
 import Error404Page from './component/Error404Page'
+import Navbar from './component/Navbar'
 
 const ClassRoutes = React.lazy(() => import('./component/ClassComponent/ClassRoutes'))
 const FunctionRoutes = React.lazy(() => import('./component/FunctionComponent/FunctionRoutes'))
@@ -14,25 +14,21 @@ const FunctionRoutes = React.lazy(() => import('./component/FunctionComponent/Fu
 const MainRoutes = createBrowserRouter([
     {
         path: "/",
-        element: <Home />,
+        element: <><Navbar /><Home /></>,
         errorElement : <Error404Page />
         // ErrorBoundary: Error404Page
     },
     {
         path: "/feature",
-        element: <Feature />,
-    },
-    {
-        path: "/pricing",
-        element: <Pricing />,
+        element: <><Navbar /><Feature /></>,
     },
     {
         path: "/about",
-        element: <About />,
+        element: <><Navbar /><About /></>,
     },
     {
         path: "/example",
-        element: <Example />,
+        element: <><Navbar /><Example /></>,
         children: [
             {
                 path: "classcomponent/*",

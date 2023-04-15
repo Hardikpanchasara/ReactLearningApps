@@ -1,12 +1,10 @@
 import React from 'react'
 import { MDBBtn } from 'mdb-react-ui-kit';
 import { Link, Outlet } from 'react-router-dom';
-import Navbar from './Navbar';
 
 const Example = () => {
     return (
         <>
-            <Navbar />
             <div className="container">
                 <div className="row my-5">
                     <div className="col-6">

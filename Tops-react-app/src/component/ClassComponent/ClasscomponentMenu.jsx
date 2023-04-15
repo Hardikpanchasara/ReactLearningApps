@@ -14,6 +14,9 @@ export default class ClasscomponentMenu extends Component {
             <Link to="classcompointro"><MDBBtn className='my-2' color="secondary" > Class Component Intro </MDBBtn></Link>
             </li>
             <li className="d-block" >
+            <Link to="constructor"><MDBBtn className='my-2' color="secondary" > Constructor </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
             <Link to="jsx"><MDBBtn className='my-2' color="secondary" > JSX </MDBBtn></Link>
             </li>
             <li className="d-block" >
@@ -24,6 +27,9 @@ export default class ClasscomponentMenu extends Component {
             </li>
             <li className="d-block" >
             <Link to="lifecycle"><MDBBtn className='my-2' color="secondary" > Life-cycle </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+            <Link to="statelifecycleloader"><MDBBtn className='my-2' color="secondary" > Statelifecycle Loader </MDBBtn></Link>
             </li>
             <li className="d-block" >
             <Link to="conditionalrendaring"><MDBBtn className='my-2' color="secondary" > Conditional Rendaring </MDBBtn></Link>
@@ -51,6 +57,12 @@ export default class ClasscomponentMenu extends Component {
             </li>
             <li className="d-block" >
             <Link to="cssexample"><MDBBtn className='my-2' color="secondary" > css example </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+            <Link to="Dynamicsubmenu"><MDBBtn className='my-2' color="secondary" > Dynamic submenu </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+            <Link to="spreadandrest"><MDBBtn className='my-2' color="secondary" > Spread and Rest </MDBBtn></Link>
             </li>
             <li className="d-block" >
             <Link to="task"><MDBBtn className='my-2' color="secondary" > Task </MDBBtn></Link>
