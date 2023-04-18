@@ -8,6 +8,8 @@ import UseContextExample from './03UseContext'
 import UseReducerhook from './04UseReducerhook'
 import UseRefHook from './05UseRefHook'
 import UseLayoutEffectHook from './06UseLayoutEffectHook'
+import UseMemoHook from './07UseMemoHook'
+import UseCallBackHook from './08UseCallBackHook'
 
 const FunctionRoutes = () => {
   return (
@@ -21,6 +23,8 @@ const FunctionRoutes = () => {
           <Route path="usereducer" element={<UseReducerhook />} />
           <Route path="useref" element={<UseRefHook />} />
           <Route path="uselayouteffect" element={<UseLayoutEffectHook />} />
+          <Route path="usememo" element={<UseMemoHook />} />
+          <Route path="usecallback" element={<UseCallBackHook />} />
         </Route>
       </Routes>
 
