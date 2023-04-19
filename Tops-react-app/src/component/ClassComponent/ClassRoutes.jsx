@@ -20,6 +20,7 @@ import Constructor from './01Constructor'
 import StatelifecycleLoder from './05-StatelifecycleLoder'
 import DynamicSubmenu from './15DynamicSubmenu'
 import SpreadandRest from './16SpreadandRest'
+import Hoc from './17Hocmain'
 
 export default class ClassRoutes extends Component {
   render() {
@@ -45,6 +46,7 @@ export default class ClassRoutes extends Component {
             <Route path='cssexample' element={<CssExample />} />
             <Route path='dynamicsubmenu' element={<DynamicSubmenu />} />
             <Route path='spreadandrest' element={<SpreadandRest />} />
+            <Route path='hoc' element={<Hoc />} />
             <Route path='task' element={<Task />} />
           </Route>
         </Routes>

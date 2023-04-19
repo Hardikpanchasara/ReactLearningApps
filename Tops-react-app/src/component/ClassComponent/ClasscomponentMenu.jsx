@@ -65,6 +65,9 @@ export default class ClasscomponentMenu extends Component {
             <Link to="spreadandrest"><MDBBtn className='my-2' color="secondary" > Spread and Rest </MDBBtn></Link>
             </li>
             <li className="d-block" >
+            <Link to="hoc"><MDBBtn className='my-2' color="secondary" > Hoc </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
             <Link to="task"><MDBBtn className='my-2' color="secondary" > Task </MDBBtn></Link>
             </li>
           </ul>
