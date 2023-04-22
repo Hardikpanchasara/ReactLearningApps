@@ -25,7 +25,7 @@ const DisplayUser = () => {
             <>
               <li key={id}>
                 {user}
-                <button type="button" className="btn btn-danger ms-auto d-block" onClick={() => deleteUser(id)}><i class="fas fa-trash-alt"></i></button>
+                <button type="button" className="btn btn-danger ms-auto d-block" onClick={() => deleteUser(id)}><i className="fas fa-trash-alt"></i></button>
               </li>
               <hr />
             </>)
