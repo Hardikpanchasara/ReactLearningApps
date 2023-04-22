@@ -1,0 +1,40 @@
+1. what is the redux thunk ? 
+
+Redux  = synchronous
+thunk  = asynchronous (err ,res)
+
+var x = 1+2 cansole.log(x) 
+var x = () => {1+2} 
+ 
+2. why redux thunk? 
+
+Delay functionality
+
+3. how redux thunk work ?
+
+folder structure : 
+  1- separate redux folder 
+    - action folder
+    - constant folder
+    - reducer folder
+    -store.js file in root directory
+
+  2- In root project 
+    - action folder
+    - constant folder
+    - reducer folder
+    -store.js file in root directory
+
+  3- In component level 
+  -component  file  
+    -action file
+    -reducer file
+    -constant file 
+    -store.js file in root directory
+      
+
+
+
+4. how to redux-thunk use with redux ?
+
+

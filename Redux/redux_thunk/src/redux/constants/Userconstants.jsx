@@ -1,0 +1,3 @@
+export const GET_USER_REQUEST = "GET USER REQUEST"
+export const GET_USER_SUCCESS = "GET USER SUCCESS "
+export const GET_USER_FAIL = "GET USER FAIL"
