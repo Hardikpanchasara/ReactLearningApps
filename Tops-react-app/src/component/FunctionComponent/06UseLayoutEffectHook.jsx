@@ -32,6 +32,7 @@ const UseLayoutEffectHook = () => {
     <div className="container">
         <h3>UseLayoutEffect runs synchronously after a render and before the screen painted (updated),. useLayoutEffect blocks the browser from repainting. </h3>
         <h3>UseEffect runs asynchronously and after a render is painted on browser, useEffect does not block the browser.</h3>
+        <h3>if you use useeffect like a constructor without dependencies then if you want to use other useeffect with dependencies then you can use useLayoutEffect </h3>
         <br /><br />
         <p>random number : {num}</p>
         <button onClick={() => setNum(0)}>update number</button>

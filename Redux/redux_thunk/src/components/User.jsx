@@ -3,10 +3,9 @@ import React from 'react'
 const User = ({ users }) => {
     console.log(users);
     console.log(users.length);
-    // console.log(users[0].id);
     return (
         <div>
-            {/* {users[0].username} */}
+            {/* {users[0].name} */}
             <table border="2px solid black">
                 <thead >
                     <tr>
