@@ -16,7 +16,7 @@ export default function SerchBox() {
     }
     return (
         <>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center mt-5">
                 <form onSubmit={handleSubmit}>
                     <MDBInput
                         label='Example label'

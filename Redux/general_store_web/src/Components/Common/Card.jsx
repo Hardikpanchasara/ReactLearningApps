@@ -29,7 +29,7 @@ export default function Card(props) {
                     <MDBCardText>
                         {props.description}
                     </MDBCardText>
-                    <Link to={`/details/${props.id}`} className='btn btn-primary'>Button</Link>
+                    <Link to={`/details/${props.id}`} className='btn btn-primary'>Check Details</Link>
                 </MDBCardBody>
             </MDBCard>
         </div>
