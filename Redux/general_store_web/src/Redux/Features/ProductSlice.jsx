@@ -37,6 +37,12 @@ const ProductSlice = createSlice({
             state.loading = true
         } ,
         [FetchSingleProductById.fulfilled] : (state ,action ) => {
+            // console.log(action.payload.rating);
+            // action.payload.rating
+            // tempData.push( data );
+            action.payload['rate'] = action.payload.rating.rate;
+            action.payload['count'] = action.payload.rating.count;
+            console.log("action.payload",action.payload);
             state.loading = false 
             state.product = action.payload ;
         },

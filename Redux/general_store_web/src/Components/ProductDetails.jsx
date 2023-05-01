@@ -13,14 +13,14 @@ import Loader from './Common/Loader';
 
 const ProductDetails = () => {
   const dispatch = useDispatch()
-  const { loading, product } = useSelector(state => ({ ...state.app }))
+  const { loading, error , product } = useSelector(state => ({ ...state.app }))
   const { id } = useParams()
   useEffect(() => {
     dispatch(FetchSingleProductById({ id }))
   }, [dispatch, id])
   return (
     <>
-      {loading ? <Loader /> : 
+      {loading ? <Loader /> : error ? error.message :
         <section className="main_heading my-5  ">
           <div className="container ">
             <div className="col-6 mx-auto">
@@ -36,12 +36,14 @@ const ProductDetails = () => {
                     <MDBCardText>
                       {product.description}
                     </MDBCardText>
-                    {/* <MDBCardText>
-                      Rating :{product.rating.rate}
+                      {/* Rating :{ JSON.stringify(product.rating.rate) } */}
+                    <MDBCardText>
+                      Rate :{ product.rate }
                     </MDBCardText>
                     <MDBCardText>
-                      Review :{product.rating.count}
-                    </MDBCardText> */}
+                      Review :{ product.count }
+                      {/* Review :{product.rating.count} */}
+                    </MDBCardText>
                     <MDBCardText>
                       Price : {product.price}
                     </MDBCardText>
