@@ -18,6 +18,8 @@ const UseMemoHook = () => {
     const CheckData = useMemo(() => {
         return countNumber(num)
     } , [num])
+    // const cachedValue = useMemo(calculateValue, dependencies)  syntaxt structure
+
     return (
         <>
             <div className="container">

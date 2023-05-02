@@ -8,12 +8,14 @@ const UseCallBackHook = () => {
   //     .then(response => response.json())
   //     .then(json => console.log(json))
   // }
+
+  // const cachedFn = useCallback(fn, dependencies)  syntaxt
   const clickHandler = useCallback(() => {
       console.log("called with callback hook")
       fetch('https://jsonplaceholder.typicode.com/users/1')
       .then(response => response.json())
       .then(json => console.log(json))
-    } , []) 
+    } , [ fetch ]) 
   const ButtonWrapper = (({CallbackfnHanlder}) => {
     console.log("clicked")
     return <button onClick={CallbackfnHanlder}>click</button>
