@@ -1,5 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import web from '../../img/web.jpg'
+import business from '../../img/team.png'
+import app from '../../img/app.webp'
+import software from '../../img/software.webp'
+import digital from '../../img/digital_marketing.avif'
+import marketing from '../../img/marketing.jpg'
 
 // Define some styled components
 const Container = styled.div`
@@ -31,7 +37,7 @@ const ProductItem = styled.div`
 
 const ProductImage = styled.img`
   max-width: 100%;
-  height: auto;
+  height: 50%;
   margin-bottom: 20px;
 `;
 
@@ -53,32 +59,32 @@ function StyledComponent () {
       <Title>Welcome to our shopping site</Title>
       <ProductList>
         <ProductItem>
-          <ProductImage src="https://via.placeholder.com/300x300" alt="Product 1" />
+          <ProductImage src={web} alt="Product 1" />
           <ProductName>Product 1</ProductName>
           <ProductPrice>$19.99</ProductPrice>
         </ProductItem>
         <ProductItem>
-          <ProductImage src="https://via.placeholder.com/300x300" alt="Product 2" />
+          <ProductImage src={business} alt="Product 2" />
           <ProductName>Product 2</ProductName>
           <ProductPrice>$29.99</ProductPrice>
         </ProductItem>
         <ProductItem>
-          <ProductImage src="https://via.placeholder.com/300x300" alt="Product 3" />
+          <ProductImage src={app} alt="Product 3" />
           <ProductName>Product 3</ProductName>
           <ProductPrice>$39.99</ProductPrice>
         </ProductItem>
         <ProductItem>
-          <ProductImage src="https://via.placeholder.com/300x300" alt="Product 4" />
+          <ProductImage src={software} alt="Product 4" />
           <ProductName>Product 4</ProductName>
           <ProductPrice>$49.99</ProductPrice>
         </ProductItem>
         <ProductItem>
-          <ProductImage src="https://via.placeholder.com/300x300" alt="Product 5" />
+          <ProductImage src={marketing} alt="Product 5" />
           <ProductName>Product 5</ProductName>
           <ProductPrice>$59.99</ProductPrice>
         </ProductItem>
         <ProductItem>
-          <ProductImage src="https://via.placeholder.com/300x300" alt="Product 6" />
+          <ProductImage src={digital} alt="Product 6" />
           <ProductName>Product 6</ProductName>
           <ProductPrice>$69.99</ProductPrice>
         </ProductItem>
