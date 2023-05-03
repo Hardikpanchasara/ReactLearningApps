@@ -5,7 +5,7 @@ import { MDBBtn } from 'mdb-react-ui-kit'
 const FunctionComponentMenu = () => {
   return (
     <>
-      <div className="row">
+      <div className="w-100">
         <div className="col-6 offset-6">
           <ul>
             <li className="d-block" >
@@ -34,6 +34,9 @@ const FunctionComponentMenu = () => {
             </li>
             <li className="d-block" >
               <Link to="usecallback"><MDBBtn className='my-2' color="secondary" > UseCallBack </MDBBtn></Link>
+            </li>
+            <li className="d-block" >
+              <Link to="styledcomponent"><MDBBtn className='my-2' color="secondary" > Styled component </MDBBtn></Link>
             </li>
           </ul>
         </div>

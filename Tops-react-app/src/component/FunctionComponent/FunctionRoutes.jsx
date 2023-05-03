@@ -10,6 +10,7 @@ import UseLayoutEffectHook from './06UseLayoutEffectHook'
 import UseMemoHook from './07UseMemoHook'
 import UseCallBackHook from './08UseCallBackHook'
 import UseContextHook from './03UseContextHook'
+import StyledComponent from './StyledComponent'
 
 const FunctionRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const FunctionRoutes = () => {
           <Route path="uselayouteffect" element={<UseLayoutEffectHook />} />
           <Route path="usememo" element={<UseMemoHook />} />
           <Route path="usecallback" element={<UseCallBackHook />} />
+          <Route path="styledcomponent" element={<StyledComponent />} />
         </Route>
       </Routes>
 
