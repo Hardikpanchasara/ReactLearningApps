@@ -26,9 +26,26 @@ const Contact = () => {
     })
   }
 
-  const formSubmit = (e) => {
+  const formSubmit = async (e) => {
     e.preventDefault();
-    alert(`My name is ${data.fullname}, my email is ${data.email} , my message is ${data.msg}`);
+    // alert(`My name is ${data.fullname}, my email is ${data.email} , my message is ${data.msg}`);
+    alert("Data submitted")
+
+    const {fullname,email,msg} = data
+
+    const res = await fetch("https://learning-project-a8e17-default-rtdb.firebaseio.com/contactform.json" ,{
+      method : "POST" ,
+      headers : {
+        "Content-Type" : "application/json"
+      },
+      body : JSON.stringify({
+          fullname,
+          email,
+          msg
+        })
+      
+    })
+
     setData({
       fullname: "",
       email: "",
@@ -45,19 +62,12 @@ const Contact = () => {
           <h1>Contact Us</h1>
         </div>
         <div className='w-50 mx-auto '>
-          <form onSubmit={formSubmit}>
-            <MDBInput id='form4Example1' wrapperClass='mb-4' label='Name' name='fullname' onChange={InputEvent} value={data.fullname} />
-            <MDBInput type='email' id='form4Example2' wrapperClass='mb-4' label='Email address' name='email' onChange={InputEvent} value={data.email} />
-            <MDBInput wrapperClass='mb-4' textarea id='form4Example3' rows={4} label='Message' name='msg' onChange={InputEvent} value={data.msg} />
+          <form onSubmit={formSubmit} method='POST' >
+            <MDBInput id='form4Example1' wrapperClass='mb-4' label='Name' name='fullname' onChange={InputEvent} value={data.fullname} required />
+            <MDBInput type='email' id='form4Example2' wrapperClass='mb-4' label='Email address' name='email' onChange={InputEvent} value={data.email} required />
+            <MDBInput wrapperClass='mb-4' textarea id='form4Example3' rows={4} label='Message' name='msg' onChange={InputEvent} value={data.msg} required />
 
-            <MDBCheckbox
-              wrapperClass='d-flex justify-content-center mb-4'
-              id='form4Example4'
-              label='Send me a copy of this message'
-              defaultChecked
-            />
-
-            <MDBBtn type='submit' className='mb-5' block>
+            <MDBBtn type='submit' className='mb-5' block >
               Contact
             </MDBBtn>
           </form>

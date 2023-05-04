@@ -11,11 +11,11 @@ function App() {
   return (
     <>
       <Routes >
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/About' element={<About />} />
-        <Route exact path='/Contact' element={<Contact />} />
-        <Route exact path='/Service' element={<Service />} />
-        <Route exact path='/admin' element={<Admin />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/About' element={<About />} />
+        <Route path='/Contact' element={<Contact />} />
+        <Route path='/Service' element={<Service />} />
+        <Route path='/admin' element={<Admin />} />
         {/* <Route path='*' element={<Error />} /> */}
         <Route path='*' element={<Navigate to="/" />} />
       </Routes>
