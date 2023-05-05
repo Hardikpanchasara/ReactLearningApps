@@ -21,6 +21,9 @@ const FunctionComponentMenu = () => {
               <Link to="usecontext"><MDBBtn className='my-2' color="secondary" > UseContext </MDBBtn></Link>
             </li>
             <li className="d-block" >
+              <Link to="usecontextexample"><MDBBtn className='my-2' color="secondary" > UseContext Example</MDBBtn></Link>
+            </li>
+            <li className="d-block" >
               <Link to="usereducer"><MDBBtn className='my-2' color="secondary" > UseReducer </MDBBtn></Link>
             </li>
             <li className="d-block" >
