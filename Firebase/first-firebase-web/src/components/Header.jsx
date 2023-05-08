@@ -33,11 +33,11 @@ export default function Header() {
               <MDBNavbarItem className='ms-lg-auto'>
                 <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink>
               </MDBNavbarItem>
-              <MDBNavbarItem>
+              {/* <MDBNavbarItem>
                 <NavLink className="nav-link" to="/about">About</NavLink>
-              </MDBNavbarItem>
+              </MDBNavbarItem> */}
               <MDBNavbarItem>
-                <NavLink className="nav-link" to="/product">Products</NavLink>
+                <NavLink className="nav-link" to="/addproduct">Add_Products</NavLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <NavLink className="nav-link" to="/contact">Contact</NavLink>

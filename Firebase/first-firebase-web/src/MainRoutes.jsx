@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Error from "./components/Error"
 import Homepage from "./pages/Homepage";
 import Registerpage from "./pages/Registerpage";
+import Loginpage from "./pages/Loginpage";
+import AddProductspage from "./pages/AddProductspage";
 
 const MainRoutes = createBrowserRouter([
     {
@@ -13,11 +15,19 @@ const MainRoutes = createBrowserRouter([
         children : [
             {
                 index : true ,
-                element : <><Homepage/></>,
+                element : <Homepage/>,
+            },
+            {
+                path : "addproduct" ,
+                element : <AddProductspage/>,
             },
             {
                 path : "register" ,
-                element : <><Registerpage/></>,
+                element : <Registerpage/>,
+            },
+            {
+                path : "login" ,
+                element : <Loginpage/>,
             },
         ]
 

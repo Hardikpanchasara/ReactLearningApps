@@ -10,7 +10,9 @@ import {
 import { useFirebase } from '../context/Firebase';
 import { useNavigate } from 'react-router-dom';
 
-export default function Registerpage() {
+
+
+export default function Loginpage() {
 
     const [user, setUser] = useState({
         email: "",
@@ -18,7 +20,7 @@ export default function Registerpage() {
     })
 
     const firebase = useFirebase()
-    // console.log(firebase)
+    console.log(firebase)
 
     const userdata = (e) => {
         // const value = e.target.value
@@ -31,9 +33,10 @@ export default function Registerpage() {
             }
         })
     }
+
     const submitdata = async (event) => {
         event.preventDefault()
-        await firebase.signupUserWithEmail(user.email, user.password)
+        await firebase.signinUserWithEmail(user.email, user.password)
         setUser({
             email: "",
             password: "",
@@ -42,42 +45,37 @@ export default function Registerpage() {
 
     const navigate = useNavigate()
     useEffect(() => {
-        if(firebase.isUserLoggedin){
+        if (firebase.isUserLoggedin) {
             navigate("/")
         }
-    }, [firebase , navigate])
+    }, [firebase, navigate])
+
 
     return (
         <>
             <div className="container mt-5 col-4">
                 <form>
-                    {/* <MDBRow className='mb-4'>
-                        <MDBCol>
-                            <MDBInput id='form3Example1' label='First name' />
+                    <MDBInput className='mb-4' type='email' id='form2Example1' label='Email address' name='email' onChange={userdata} required value={user.email} />
+                    <MDBInput className='mb-4' type='password' id='form2Example2' label='Password' name='password' onChange={userdata} required value={user.password} />
+
+                    <MDBRow className='mb-4'>
+                        <MDBCol className='d-flex justify-content-center'>
+                            <MDBCheckbox id='form2Example3' label='Remember me' defaultChecked />
                         </MDBCol>
                         <MDBCol>
-                            <MDBInput id='form3Example2' label='Last name' />
+                            <a href='#!'>Forgot password?</a>
                         </MDBCol>
-                    </MDBRow> */}
-                    <MDBInput className='mb-4' type='email' id='form3Example3' label='Email address' name='email' onChange={userdata} value={user.email} required />
-                    <MDBInput className='mb-4' type='password' id='form3Example4' label='Password' name='password' onChange={userdata} value={user.password} required />
+                    </MDBRow>
 
-                    {/* <MDBCheckbox
-                        wrapperClass='d-flex justify-content-center mb-4'
-                        id='form3Example5'
-                        label='Subscribe to our newsletter'
-                        defaultChecked
-                    /> */}
-
-                    <MDBBtn type='submit' className='mb-4' block onClick={submitdata}>
-                        Sign up
+                    <MDBBtn type='submit' className='mb-4' block onClick={submitdata} >
+                        Sign in
                     </MDBBtn>
 
                 </form>
                 <div className='text-center'>
-                    {/* <p>
-                            Not a member? <a >Register</a>
-                        </p> */}
+                    <p>
+                        Not a member? <a href='#!'>Register</a>
+                    </p>
                     <p>or sign up with:</p>
 
                     {/* <MDBBtn floating color="secondary" className='mx-1'>
@@ -90,12 +88,11 @@ export default function Registerpage() {
 
                     {/* <MDBBtn floating color="secondary" className='mx-1'>
                             <MDBIcon fab icon='twitter' />
-                        </MDBBtn> */}
+                        </MDBBtn>
 
-                    {/* <MDBBtn floating color="secondary" className='mx-1'>
+                        <MDBBtn floating color="secondary" className='mx-1'>
                             <MDBIcon fab icon='github' />
                         </MDBBtn> */}
-
                 </div>
             </div>
         </>
