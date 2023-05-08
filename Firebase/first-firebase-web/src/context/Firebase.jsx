@@ -50,8 +50,8 @@ export const FirebaseProvider = (props) => {
     console.log(userlogged)
 
     const createNewProduct = async (name, id, price, coverpic) => {
-        const imageRef = ref(storage, `uploads/images/${Date.now()}-${coverpic.name}`)
-        const uploadres = await uploadBytes(storage, coverpic)
+        const imageRef = ref(storage, `uploads/images/${Date.now()}-${coverpic}`)
+        const uploadres = await uploadBytes(imageRef, coverpic)
         return await addDoc(collection(Firestore, "Products"), {
             name,
             id,

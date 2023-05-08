@@ -22,7 +22,7 @@ export default function AddProductspage() {
   })
 
   const firebase = useFirebase()
-  console.log(firebase)
+  // console.log(firebase)
 
   const userdata = (e) => {
     // const value = e.target.value
@@ -56,7 +56,7 @@ export default function AddProductspage() {
           <MDBInput className='mb-4' type='text' id='form2Example2' label='product id' name='id' onChange={userdata} required value={product.id} />
           <MDBInput className='mb-4' type='number' id='form2Example2' label='price' name='price' onChange={userdata} required value={product.price} />
           <MDBInputGroup className='mb-3'>
-            <input className='form-control' type='file' required name='coverpic' onSelect={userdata} />
+            <input className='form-control' type='file' value={product.coverpic} required name='coverpic' onChange={userdata} />
             {/* <MDBBtn outline color='secondary'>
               Button
             </MDBBtn> */}
