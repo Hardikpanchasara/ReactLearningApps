@@ -41,6 +41,9 @@ const FunctionComponentMenu = () => {
             <li className="d-block" >
               <Link to="styledcomponent"><MDBBtn className='my-2' color="secondary" > Styled component </MDBBtn></Link>
             </li>
+            <li className="d-block" >
+              <Link to="useimperetive"><MDBBtn className='my-2' color="secondary" > use Imperetive Handler </MDBBtn></Link>
+            </li>
           </ul>
         </div>
       </div>
