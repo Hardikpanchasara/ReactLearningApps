@@ -8,8 +8,8 @@ import {
     signInWithPopup,
     onAuthStateChanged,
 } from "firebase/auth"
-import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { getStorage, ref, uploadBytes } from "firebase/storage"
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import { getStorage, ref, uploadBytes , getDownloadURL } from "firebase/storage"
 
 
 const FirebaseContext = createContext(null)
@@ -49,25 +49,33 @@ export const FirebaseProvider = (props) => {
     const signinwithgoogle = () => signInWithPopup(FirebaseAuth, GoogleProvider)
     console.log(userlogged)
 
-    const createNewProduct = async (name, id, price, coverpic) => {
+    const createNewProduct = async (name, sellername, price, coverpic) => {
         const imageRef = ref(storage, `uploads/images/${Date.now()}-${coverpic}`)
         const uploadres = await uploadBytes(imageRef, coverpic)
         return await addDoc(collection(Firestore, "Products"), {
             name,
-            id,
+            sellername,
             price,
-            imgURL : uploadres.ref.fullPath,
-            UserID : userlogged.uid,
-            UserEmail : userlogged.email ,
-            UserName : userlogged.displayName ,
-            UserPhoto : userlogged.photoURL
+            imgURL: uploadres.ref.fullPath,
+            UserID: userlogged.uid,
+            UserEmail: userlogged.email,
+            UserName: userlogged.displayName,
+            UserPhoto: userlogged.photoURL
         })
+    }
+
+    const listAllProducts = () => {
+        return getDocs(collection(Firestore, "Products"))
+    }
+
+    const getImgurl = (path) => {
+        return getDownloadURL(ref(storage , path ))
     }
 
     const isUserLoggedin = userlogged ? true : false
 
 
-    return <FirebaseContext.Provider value={{ signupUserWithEmail, signinUserWithEmail, signinwithgoogle, isUserLoggedin, createNewProduct }}>
+    return <FirebaseContext.Provider value={{ signupUserWithEmail, signinUserWithEmail, signinwithgoogle, isUserLoggedin, createNewProduct, listAllProducts, getImgurl }}>
         {props.children}
     </FirebaseContext.Provider>
 }

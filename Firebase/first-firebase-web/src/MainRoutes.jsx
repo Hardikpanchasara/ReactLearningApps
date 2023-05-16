@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage";
 import Registerpage from "./pages/Registerpage";
 import Loginpage from "./pages/Loginpage";
 import AddProductspage from "./pages/AddProductspage";
+import OurPoducts from "./pages/OurPoducts";
 
 const MainRoutes = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const MainRoutes = createBrowserRouter([
             {
                 index : true ,
                 element : <Homepage/>,
+            },
+            {
+                path : "products" ,
+                element : <OurPoducts />,
             },
             {
                 path : "addproduct" ,

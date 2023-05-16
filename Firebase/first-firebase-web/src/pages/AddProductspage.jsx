@@ -16,7 +16,7 @@ export default function AddProductspage() {
 
   const [product, setProduct] = useState({
     name: "",
-    id: "",
+    sellername: "",
     price: "",
     coverpic: "",
   })
@@ -38,10 +38,10 @@ export default function AddProductspage() {
 
   const submitdata = async (event) => {
     event.preventDefault()
-    await firebase.createNewProduct(product.name, product.id ,product.price, product.coverpic)
+    await firebase.createNewProduct(product.name, product.sellername ,product.price, product.coverpic)
     setProduct({
       name: "",
-      id: "",
+      sellername: "",
       price: "",
       coverpic: "",
     })
@@ -53,7 +53,7 @@ export default function AddProductspage() {
       <div className="container mt-5 col-4">
         <form>
           <MDBInput className='mb-4' type='text' id='form2Example1' label='product name' name='name' onChange={userdata} required value={product.name} />
-          <MDBInput className='mb-4' type='text' id='form2Example2' label='product id' name='id' onChange={userdata} required value={product.id} />
+          <MDBInput className='mb-4' type='text' id='form2Example2' label='seller name' name='sellername' onChange={userdata} required value={product.sellername} />
           <MDBInput className='mb-4' type='number' id='form2Example2' label='price' name='price' onChange={userdata} required value={product.price} />
           <MDBInputGroup className='mb-3'>
             <input className='form-control' type='file' value={product.coverpic} required name='coverpic' onChange={userdata} />
